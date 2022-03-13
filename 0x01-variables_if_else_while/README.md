@@ -6,4 +6,5 @@
 	prints alphabet in lower case followed by a new line
 3-print_alphabets.c
 	prints alphabet in uper case then in lower case followed by a new line
-
+4-print_alphabt.c
+	prints all letters of the alaphabet except q and e
