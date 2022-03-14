@@ -1,11 +1,9 @@
 #include <stdio.h>
 /**
- * main-Entry
+ * main - Entry point
  *
- * Description - To display the sizes of int etc
- *
- * Return - Always 0 (success)
- **/
+ * Return: Always 0
+ */
 int main(void)
 {
 	char charType;
@@ -14,11 +12,11 @@ int main(void)
 	long long int llint;
 	float floatType;
 
-	printf("Size of a char: %ld\n byte(s)", sizeof(charType));
-	printf("Size of an int: %ld\n byte(s)", sizeof(intType));
-	printf("Size of a long int: %ld\n byte(s)", sizeof(lint));
-	printf("Size of a long long int: %ld\n byte(s)", sizeof(llint));
-	printf("Size of a float: %ld\n byte(s)", sizeof(floatType));
+	printf("Size of a char: %ld byte(s)\n", sizeof(charType));
+	printf("Size of an int: %ld byte(s)\n", sizeof(intType));
+	printf("Size of a long int: %ld byte(s)\n", sizeof(lint));
+	printf("Size of a long long int: %ld byte(s)\n", sizeof(llint));
+	printf("Size of a float: %ld byte(s)\n", sizeof(floatType));
 
 	return (0);
 }
