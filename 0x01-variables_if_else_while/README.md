@@ -8,3 +8,5 @@
 	prints alphabet in uper case then in lower case followed by a new line
 4-print_alphabt.c
 	prints all letters of the alaphabet except q and e
+5-print_numbers.c
+	prints all single digit numbers of base 10 starting from 0
