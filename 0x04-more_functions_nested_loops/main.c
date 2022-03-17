@@ -1,10 +1,8 @@
 #include "main.h"
 int main(void)
 {
-	int i;
-	i = 20;
+	print_numbers();
 
-	_isupper(i);
 	return (0);
 }
 
