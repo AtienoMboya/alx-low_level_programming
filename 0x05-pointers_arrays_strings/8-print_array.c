@@ -5,7 +5,7 @@
  * @a: first array of ints
  * @b: second array of ints
  */
-void print_array(int *a, int *b)
+void print_array(int *a, int n)
 {
 	int j;
 
