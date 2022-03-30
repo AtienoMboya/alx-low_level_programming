@@ -43,7 +43,7 @@ int find_strlen(char *s)
 {
 	int len = 0;
 
-	if (*s(s + len))
+	if (*(s + len);
 	{
 		len++;
 		len += find_strlen(s + len);
