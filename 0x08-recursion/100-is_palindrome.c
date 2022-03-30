@@ -7,46 +7,46 @@
  */
 int is_palindrome(char *s)
 {
-	if (*s == '0')
+	int index = 0;
+	int len = find_strlen(s);
+
+	if (!(*s))
 		return (1);
 
-	return (check_palindrome(s));
+	return (check_palindrome(s, len, index));
 }
 /**
  * check_palindrome - check if a string is palindrome
  * @s: the string value to be checked
+ * @len: The length of s
+ * @index: The index of the string to be checked
  *
  * Return: Integer value
  */
-int check_palindrome(char *s)
+int check_palindrome(char *s, int len, int index)
 {
-	int l = _strlen_recursion(s) - 1;
+	if (s[index] == s[len / 2])
+		return (1);
 
-	if (*s == s[l])
-	{
-		s++;
-		l--;
-	}
-	else
-	{
-		return (0);
-	}
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
 
-	return (1);
+	return (0);
 }
 /**
- * _strlen_recursion - Get the length of a string
+ * find_strlen - Get the length of a string
  * @s: the string to get the length
  *
  * Return: the string length
  */
-int _strlen_recursion(char *s)
+int find_strlen(char *s)
 {
-	if (*s == '\0')
-	{
-		return (0);
-	}
+	int len = 0;
 
-	s++;
-	return (_strlen_recursion(s) + 1);
+	if (*s(s + len))
+	{
+		len++;
+		len += find_strlen(s + len);
+	}
+	return (len);
 }
