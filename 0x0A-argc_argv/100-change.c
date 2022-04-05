@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		}
 		if ((cents - 2) >= 0)
 		{
-			cents - = 2;
+			cents -= 2;
 			continue;
 		}
 		cents--;
