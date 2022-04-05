@@ -5,7 +5,7 @@
  * @argc: The number of arguments in the program
  * @argv: An array of pointers to the arguments
  *
- * Return: If the number of arguments is not exactly one -1 otherwise - 0
+ * Return: If the number of arguments is not exactly one 1 otherwise 0
  */
 int main(int argc, char *argv[])
 {
