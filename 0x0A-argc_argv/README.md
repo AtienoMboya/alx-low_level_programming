@@ -8,4 +8,5 @@
 	multiplies two numbers
 4-add.c
 	adds two numbers
-
+100-change.c
+	print the minimum number of coins to make change for an amount of money
