@@ -10,24 +10,34 @@
  */
 int main(int argc, char *argv[])
 {
-	int num, digit, sum = 0;
+	int i;
 
-	for (num = 1 ; num < argc ; num++)
+	unisgned int k, sum = 0;
+
+	char *e;
+
+	if (argc > 1)
 	{
-		for (digit = 0 ; argv[num][digit] ; digit++)
+		for (i = 1 ; i < argc ; i++)
 		{
-			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			e = argv[i];
+
+			for (k = 0 ; k < strlen(e) ; k++)
 			{
-				printf('Error\n');
-				return (1);
+				if (e[k] < 48 || e[k] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+			sum += atoi(e);
+			e++;
 		}
-
-		sum += atoi(argv[num]);
-
+		printf("%d\n", sum);
 	}
-
-	printf("%d\n", sum);
-
-	return (0);
+	else
+	{
+		printf("0\n");
+	}
+	return (0)
 }
