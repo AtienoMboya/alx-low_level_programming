@@ -8,6 +8,7 @@
  * @n: the number of strings passed to the function
  * @...: a variable number of strings to be printed
  *
+ * Description: If separator is NULL, it is not printed
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -32,4 +33,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	printf("\n");
 
-	va_end(strings);}
+	va_end(strings);
+}
