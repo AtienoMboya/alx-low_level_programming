@@ -2,9 +2,10 @@
 #define CALC_H
 
 /**
- * struct op - A struct op
- * @op: the operator
- * @f: the asssociated function
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
  */
 typedef struct op
 {
