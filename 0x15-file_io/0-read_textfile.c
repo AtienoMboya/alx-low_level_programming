@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * read_textfile - reads a text file and prints to POSIX
  * @filename: pointer to the name of the file
@@ -9,7 +10,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int o, r, w;
+	ssize_t o, r, w;
 	char *buffer;
 
 	if (filename == NULL)
@@ -19,26 +20,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	o = open(filename, 0_RDONLY);
-	if (o == -1)
-	{
-		return (0);
-	}
+	o = open(filename, O_RDONLY);
 	r = read(o, buffer, letters);
-	if (r == -1)
-	{
-		free(buffer);
-		close(o);
-		return (0);
-	}
 	w = write(STDOUT_FILENO, buffer, r);
-	if (w == -1)
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
 		free(buffer);
-		close(o);
 		return (0);
 	}
 
+	free(buffer);
 	close(o);
-	return (r);
+
+	return (w);
 }
